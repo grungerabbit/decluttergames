@@ -1,0 +1,201 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Orbitron:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.clearfix {
+		*zoom: 1;
+	}
+	.clearfix:before, .clearfix:after {
+		display: table;
+		content: "";
+		// Fixes Opera/contenteditable bug:
+		// http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+		line-height: 0;
+	}
+	.clearfix:after {
+		clear: both;
+	}
+	li {
+		list-style: none;
+	}
+	body {
+		font-family: 'Carrois Gothic', sans-serif;
+		background: #222 url("grid.jpg");
+		color: #CBE8F7;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Orbitron', sans-serif;
+		text-transform: uppercase;
+	}
+	a {
+		color: #4899C3;
+		transition: color .5s linear;
+		-moz-transition: color .5s linear;    /* FF3.7+ */
+		-o-transition: color .5s linear;      /* Opera 10.5 */
+		-webkit-transition: color .5s linear; /* Saf3.2+, Chrome */
+	}
+	a:hover {
+		color: #A1E2FF;
+	}
+	.main-header {
+		background: black url("header.jpg") no-repeat center center;
+		min-height: 25em;
+	}
+	.header__title {
+		color: white;
+		padding: 5em 0;
+	}
+	.site {
+		width: 80%;
+		margin: auto;
+	}
+
+	.sidebar__content {
+		width: 90%;
+		float: left;
+		display: none;
+		padding-left: .5em;
+	}
+	.sidebar__slider {
+		background: #CC3A17;
+		color: white;
+		width: 20px;
+		float: right;
+		height: 80em;
+		cursor: pointer;
+		transition: background-color .5s linear;
+		-moz-transition: background-color .5s linear;    /* FF3.7+ */
+		-o-transition: background-color .5s linear;      /* Opera 10.5 */
+		-webkit-transition: background-color .5s linear; /* Saf3.2+, Chrome */
+	}
+	.sidebar__slider:hover {
+		background: white;
+	}
+	.sidebar__slider p {
+		margin-top: 50px;
+		padding: 5px;
+		background: #000305;
+	}
+	.sidebar {
+		position: fixed;
+		background: #000305;
+		top: 0;
+		left: 0;
+		width: 25px;
+		font-size: .75em;
+		color: #888;
+		border-right: 1px solid #5B1500;
+	}
+	.sidebar__content section {
+		border-bottom: 1px solid #011F2D;
+		padding: 1em;
+	}
+	.sidebar__content h3 {
+		margin-bottom: .5em;
+		color: white;
+	}
+	.sidebar__expanded {
+		width: 20%;
+		min-width: 300px;
+	}
+	img {
+		max-width: 100%;
+	}
+	p {
+		margin: .5em 0;
+	}
+	.main__content {
+		padding: 4em 0;
+		min-height: 50em;
+	}
+	footer {
+		color: #888;
+		font-size: .75em;
+	}
+	</style>
+	
+	<script>
+	(function($){
+		var decluttergames = {
+			'init' : function () {
+				$(".sidebar__slider").click(function() {
+					$(".sidebar__content").show();
+					$(this).parent().toggleClass("sidebar__expanded");
+				})
+			}
+		};
+		$(document).ready( function() {
+			decluttergames.init();
+		});
+	}(jQuery));
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<aside class="sidebar clearfix">
+			<div class="sidebar__slider">
+				<p>?&raquo;</p>
+			</div>
+			<div class="sidebar__content">
+				<section>
+					<h3>About</h3>
+					<p>The Declutter Games is a side project of <a href="http://grungerabbit.com">Cheryl Wu</a>. I'm a 20-year-old New Yorker who lives in a 350-square-foot studio apartment with my boyfriend and a <a href="https://www.airbnb.com/rooms/999076">rotating cast of guests</a>. All items in my apartment therefore need to prove their worth, or perish.</p>
+					<p>I enjoy the Hunger Games films, Jennifer Lawrence, and <a href="http://frootlooppokemon.tumblr.com/">starting novelty tumblrs</a>, so I made this to <a href="http://lifehacker.com/how-clutter-affects-your-brain-and-what-you-can-do-abo-662647035">motivate myself</a> to declutter.</p>
+		    	
+					<p>Every fallen tribute is laid to rest on <a href="https://www.freecycle.org/">Freecycle</a> or <a href="http://newyork.craigslist.org/">Craigslist</a>. If you're in NYC, you can pick up anything that interests you! (One person's unnamed tribute from District 8 is another's Peeta Mellark.)</p>
+				</section>
+				<section>
+					<h3>Decluttering Resources</h3>
+					
+					<ul>
+						<li><a href="http://unclutterer.com/">Unclutterer</a></li>
+						<li><a href="http://www.missminimalist.com/">Miss Minimalist</a></li>
+						<li><a href="http://zenhabits.net/">Zen Habits</a></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Credits</h3>
+					
+					<p>The Declutter Games is indebted to but not sponsored by or related to The Hunger Games.</p>
+					<p>I made the Tumblr theme and tribute template using resources from the HG canon.</p>
+					
+					<ul>
+						<li><a href="http://www.thehungergamesexplorer.com/us/epk/hunger-games/">HG Films official site</a></li>
+						<li><a href="http://www.suzannecollinsbooks.com/">Suzanne Collins</a></li>
+						<li><a href="http://thehungergames.wikia.com/wiki/The_Hunger_Games_Wiki">Hunger Games Wikia</a></li>
+						<li><a href="https://www.theleagueofmoveabletype.com/orbitron">Orbitron font</a></li>
+						<li><a href="http://giphy.com/search/the-hunger-games">Giphy gifs</a></li>
+					</ul>
+				</section>
+				
+				<img src="http://media0.giphy.com/media/N6QBgJfTRlNWE/giphy.gif">
+			</div>
+		</aside>
+		<header class="main-header">
+			<div class="site">
+				<h1 class="header__title">The Declutter Games</h1>
+			</div>	
+		</header>
+		
+		
+		<div class="site main__content">
+			<h1>TUMBLR CRAP GOES HERE</h1>
+			<p>oh i hoped that you were somebody i could count to pull me to my feet again when i was in doubt</p>
+		</div>
+		
+		<footer>
+			<div class="site">
+				<p>declutter games 1.0.0</p>
+				<p>a side project of <a href="http://grungerabbit.com/">cheryl wu</a></p>
+			</div>
+		</footer>
+	</div>
+	
+</body>
+</html>
